@@ -40,7 +40,7 @@ a {
 	text-decoration: none;
 }
 
-/* 상단바 */
+/* NAVBAR (상단바) */
 #navbar {
 	background: var(--color-4);
 	position: fixed;
@@ -62,16 +62,23 @@ a {
 	padding: 20px 4vw;
 	font-size: 16px;
 	color: var(--color-1);
+	text-decoration: none; /* 기본 밑줄 제거 */
+	position: relative; /* 하위 요소에 대한 상대적인 위치 지정 */
 }
 
-#navbar i {
-	margin-right: 10px;
-	color: var(--color-4);
-	transition: color 0.5s;
+#navbar a::after {
+	content: ''; /* 가상 요소를 추가하여 밑줄 효과를 만듭니다. */
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0; /* 초기에는 밑줄이 없도록 설정 */
+	height: 2px; /* 밑줄의 높이를 조절합니다. */
+	background-color: var(--color-5);
+	transition: width 0.3s ease; /* 트랜지션 효과를 추가합니다. */
 }
 
-#navbar a:hover i {
-	color: var(--color-5);
+#navbar a:hover::after {
+	width: 100%; /* 마우스 호버시 밑줄이 메뉴 전체를 가리도록 넓힙니다. */
 }
 
 @media ( max-width : 600px) {
@@ -424,9 +431,8 @@ a {
 }
 
 #contact h3 i {
-	color:var(--color-5);
-	}
-
+	color: var(--color-5);
+}
 
 #links-list {
 	list-style: none;
@@ -530,15 +536,15 @@ footer p:last-child {
 
 		<ul>
 
-			<li><a class="section-link" href="#welcome-section"><i class="fas fa-chevron-right"></i>welcome</a></li>
+			<li><a class="section-link" href="#welcome-section">welcome</a></li>
 
-			<li><a class="section-link" href="#about"><i class="fas fa-chevron-right"></i>about</a></li>
+			<li><a class="section-link" href="#about">about</a></li>
 
-			<li><a class="section-link" href="#skills"><i class="fas fa-chevron-right"></i>skills</a></li>
+			<li><a class="section-link" href="#skills">skills</a></li>
 
-			<li><a class="section-link" href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
+			<li><a class="section-link" href="#projects">Projects</a></li>
 
-			<li><a class="section-link" href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+			<li><a class="section-link" href="#contact-section">Contact</a></li>
 
 		</ul>
 
@@ -711,7 +717,7 @@ footer p:last-child {
 
 
 	</section>
-	
+
 	<!-- CONTACT -->
 	<section id="contact-section">
 
