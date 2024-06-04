@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>오창진 포트폴리오</title>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat&display=swap"
-	rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<style>
-/* VARIABLES */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오창진 포트폴리오</title>
+  <!-- 테일윈드 css -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- 데이지 ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+  <!-- 제이쿼리 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* VARIABLES */
 :root {
   --color-0: white;
   --color-1: hsl(46, 100%, 97%);
@@ -19,10 +19,13 @@
   --color-3: hsl(34, 6%, 24%);
   --color-4: hsl(40, 4%, 14%);
   --color-5: hsl(17, 83%, 54%);
+
+  --color-6: hsl(30, 30%, 35%);
+
   --color-9: black;
 
-  --font-em: "Comfortaa", cursive;
-  --font-normal: "Montserrat", sans-serif;
+  /*   --font-em: "Comfortaa", cursive;
+  --font-normal: "Montserrat", sans-serif; */
 }
 
 /* DEFAULT VALUES */
@@ -30,7 +33,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-normal);
+/*   font-family: var(--font-normal); */
   /* border: 1px solid; */
 }
 
@@ -96,11 +99,12 @@ a {
   justify-items: center;
   grid-row-gap: 15px;
   background: var(--color-3);
-  background-image: url("https://i.postimg.cc/Gp1CKLQF/florian-olivo-4hb-J-eym-Z1o-unsplash-modified.jpg");
+  /* 웰컴페이지 부분 배경화면   */
+  /*   background-image: url("https://i.postimg.cc/Gp1CKLQF/florian-olivo-4hb-J-eym-Z1o-unsplash-modified.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center center; */
 }
 
 #welcome-section h1 {
@@ -157,6 +161,145 @@ a {
     font-size: 16px;
   }
 }
+
+
+/* about */
+#about {
+  padding: 40px 20px;
+  background: var(--color-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#about h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: var(--color-1);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-image-wrapper {
+  flex-shrink: 0;
+}
+
+.about-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-details {
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-details li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--color-1);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #about h1 {
+    font-size: 28px;
+  }
+
+  .about-details li {
+    font-size: 16px;
+  }
+}
+
+/* skills */
+  #skills {
+    height: 100vh;
+    background: var(--color-2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  #skills h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .skills-container {
+      gap: 8px;
+    }
+
+    .skill-logo {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-container {
+      gap: 6px;
+    }
+
+    .skill-logo {
+      width: 60px;
+      height: 60px;
+    }
+  }
 
 /* PROJECTS */
 #projects {
@@ -398,124 +541,207 @@ footer p:last-child {
   }
 }
 
-</style>
+
+  </style>
+</head>
 <body>
-	<!-- NAVBAR -->
-	<nav id="navbar">
+  <!-- NAVBAR (상단바) -->
+<nav id="navbar">
 
-		<ul>
+  <ul>
 
-			<li><a class="section-link" href="#welcome-section"><i class="fas fa-chevron-right"></i>Welcome</a></li>
+    <li><a class="section-link" href="#welcome-section"><i class="fas fa-chevron-right"></i>welcome</a></li>
 
-			<li><a class="section-link" href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
+    <li><a class="section-link" href="#about"><i class="fas fa-chevron-right"></i>about</a></li>
 
-			<li><a class="section-link" href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+    <li><a class="section-link" href="#skills"><i class="fas fa-chevron-right"></i>skills</a></li>
 
-		</ul>
+    <li><a class="section-link" href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
 
-	</nav>
+    <li><a class="section-link" href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
 
-	<!-- WELCOME -->
-	<section id="welcome-section">
+  </ul>
 
-		<h1>Web Developer</h1>
+</nav>
 
-		<a id="link-to-contact" href="#contact-section">Contact me</a> <a id="link-to-projects" href="#projects"><i
-			class="fas fa-chevron-down"></i></a>
+<!-- WELCOME -->
+<section id="welcome-section">
 
-	</section>
+  <h1>O Chang Jin</h1>
 
-	<!-- PROJECTS -->
-	<section id="projects">
+  <a id="link-to-contact" href="#contact-section">Contact me</a>
 
-		<h2>My projects:</h2>
+  <a id="link-to-projects" href="#projects"><i class="fas fa-chevron-down"></i></a>
 
-		<div id="projects-gallery">
+</section>
 
-			<div class="project-tile">
-				<a href="https://codepen.io/marsud/full/mdPzrOy" target="_blank"> <img class="webpage-img"
-					src="https://i.postimg.cc/fT3CVj6P/page4.png" alt="webpage screen">
-				</a>
-				<p class="project-caption">Documentation Page</p>
-			</div>
+<!-- about me -->
+<!-- about me -->
+<section id="about">
+  <h1>소개</h1>
+  <div class="about-container">
+    <div class="about-image-wrapper">
+      <img class="about-image" src="https://velog.velcdn.com/images/tama51/post/22d8f16d-e43f-4c33-822f-9a6a61a1de2a/image.jpg" alt="소개 이미지">
+    </div>
+    <div class="about-details">
+      <ul>
+        <li>이름 : 오창진</li>
+        <li>학력 : 대전이문고등학교 졸업</li>
+        <li>교육 :
+          <ul>
+            <li>코리아IT아카데미 [산대특]프롬프트AI&Open API&공공데이터를 활용한 웹앱개발자 양성과정(6개월)</li>
+            <li>코리아IT아카데미 python 기초 , 심화(1개월)</li>
+            <li>코리아IT아카데미 프론트엔드 개발과정 (2개월)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-			<div class="project-tile">
-				<a href="https://codepen.io/marsud/full/YzqvdvV" target="_blank"> <img class="webpage-img"
-					src="https://i.postimg.cc/xjpgjFFH/page3.png" alt="webpage screen">
-				</a>
-				<p class="project-caption">Landing Page</p>
-			</div>
+<!-- skills -->
+<section id="skills">
+  <h2>기술 스택</h2>
+  <div class="skills-container">
 
-			<div class="project-tile">
-				<a href="https://codepen.io/marsud/full/poyVZGO" target="_blank"> <img class="webpage-img"
-					src="https://i.postimg.cc/02LfDKvy/page2.png" alt="webpage screen">
-				</a>
-				<p class="project-caption">User Form</p>
-			</div>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+    </div>
 
-			<div class="project-tile">
-				<a href="https://codepen.io/marsud/full/qBZYaYm" target="_blank"> <img class="webpage-img"
-					src="https://i.postimg.cc/T1sckpWQ/page1.png" alt="webpage screen">
-				</a>
-				<p class="project-caption">Tribute Page</p>
-			</div>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png" alt="">
+    </div>
 
-			<div class="project-tile">
-				<a>
-					<div class=placeholder-img>
-						<p>Coming soon</p>
-					</div>
-				</a>
-				<p class="project-caption">Other</p>
-			</div>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png?20180912181046" alt="">
+    </div>
 
-			<div class="project-tile">
-				<a>
-					<div class=placeholder-img>
-						<p>Coming soon</p>
-					</div>
-				</a>
-				<p class="project-caption">Other</p>
-			</div>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Java-logo.png" alt="">
+    </div>
 
-		</div>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/438px-Python-logo-notext.svg.png" alt="">
+    </div>
 
-		<a href="#" id="more-button">Show more<i class="fas fa-chevron-right"></i></a>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/524px-JQuery-Logo.svg.png" alt="">
+    </div>
 
-	</section>
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="">
+    </div>
 
-	<!-- CONTACT -->
-	<section id="contact-section">
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png" alt="">
+    </div>
 
-		<div id="contact">
+    <div class="skill-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png?20230616230349" alt="">
+    </div>
 
-			<h2>Contact</h2>
+    <div class="skill-logo">
+      <img src="https://velog.velcdn.com/images/tama51/post/177c1912-576d-4a60-9b77-8139fd8623e6/image.png" alt="">
+    </div>
 
-			<h3>Find me on my social media or send email:</h3>
+    <div class="skill-logo">
+      <img src="https://velog.velcdn.com/images/tama51/post/ff0a09c6-eb39-4f43-922c-55b75e006362/image.png" alt="">
+    </div>
 
-			<ul id="links-list">
-				<li><a id="profile-link" href="https://www.freecodecamp.org/fccb269dbf2-7646-4d62-a7d0-adb6e5815188"
-					target="_blank"><i class="fab fa-free-code-camp"></i>FreeCodeCamp</a></li>
-				<li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
-				<li><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></li>
-				<li><a href="#"><i class="fas fa-envelope"></i>Email</a></li>
-			</ul>
+  </div>
+</section>
 
-		</div>
+<!-- PROJECTS -->
+<section id="projects">
 
-		<!-- FOOTER -->
-		<div id="footer-container">
-			<footer>
-				<p>
-					Photo by <a
-						href="https://unsplash.com/@florianolv?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Florian
-						Olivo</a> on <a
-						href="https://unsplash.com/s/photos/code?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
-				</p>
+  <h2>My projects</h2>
 
-				<p>Copyright 2020</p>
-			</footer>
-		</div>
-	</section>
+  <div id="projects-gallery">
+
+    <div class="project-tile">
+      <a href="https://github.com/dhckdwls/Project-OCJ-24-03-20" target="_blank">
+        <img class="webpage-img" src="https://camo.githubusercontent.com/fcb8e86234d1a4372d1601680b6bfb9736213ed7d179deeec88a4ac45f0db6a3/68747470733a2f2f76656c6f672e76656c63646e2e636f6d2f696d616765732f74616d6135312f706f73742f39633132623837662d356438312d343134662d613136362d3663656431626164653965652f696d6167652e706e67" alt="webpage screen">
+      </a>
+      <p class="project-caption">Random Trip</p>
+    </div>
+
+    <div class="project-tile">
+      <a href="https://github.com/teamProject-24-04" target="_blank">
+        <img class="webpage-img" src="https://velog.velcdn.com/images/tama51/post/5847c2a6-7846-4cdd-9ad7-53bb81768ebb/image.png" alt="webpage screen">
+      </a>
+      <p class="project-caption">GrillMaster</p>
+    </div>
+
+    <div class="project-tile">
+      <a href="https://velog.io/@tama51/%ED%94%84%EB%A6%AC%EC%98%A8" target="_blank">
+        <img class="webpage-img" src="https://velog.velcdn.com/images/tama51/post/1caad616-ced9-4812-ab9f-599c5e5c83f9/image.png" alt="webpage screen">
+      </a>
+      <p class="project-caption">Prion</p>
+    </div>
+
+    <div class="project-tile">
+      <a>
+        <div class=placeholder-img>
+          <p>Coming soon</p>
+        </div>
+      </a>
+      <p class="project-caption">Other</p>
+    </div>
+
+    <div class="project-tile">
+      <a>
+        <div class=placeholder-img>
+          <p>Coming soon</p>
+        </div>
+      </a>
+      <p class="project-caption">Other</p>
+    </div>
+
+    <div class="project-tile">
+      <a>
+        <div class=placeholder-img>
+          <p>Coming soon</p>
+        </div>
+      </a>
+      <p class="project-caption">Other</p>
+    </div>
+
+  </div>
+  <!-- 더보기 인데 나중에 페이지작업으로 바꿔야 할듯 별로 필요없음   -->
+  <a href="#" id="more-button">Show more<i class="fas fa-chevron-right"></i></a>
+  <a id="link-to-projects" href="#contact"><i class="fas fa-chevron-down"></i></a>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section">
+
+  <div id="contact">
+
+    <h2>Contact</h2>
+
+    <h3>전화번호 : 010 - 9800 - 6111</h3>
+    <h3>gmail : codetama51@gmail.com</h3>
+    <h3>naver : tama51@naver.com</h3>
+    <br>
+
+    <ul id="links-list">
+      <li><a href="#"><i class="fab fa-twitter-square"></i>github 주소</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i>velog 주소</a></li>
+    </ul>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer-container">
+    <footer>
+      <p>오창진</p>
+
+      <p>Made by 2024</p>
+    </footer>
+  </div>
+</section>
+
+</div>
 </body>
 </html>
