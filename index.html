@@ -1,747 +1,747 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>오창진 포트폴리오</title>
-  <!-- 테일윈드 css -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- 데이지 ui -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
-  <!-- 제이쿼리 -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- 폰트어썸 -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <style>
-    /* VARIABLES */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오창진 포트폴리오</title>
+<!-- 테일윈드 css -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!-- 데이지 ui -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- 폰트어썸 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+/* VARIABLES */
 :root {
-  --color-0: white;
-  --color-1: hsl(46, 100%, 97%);
-  --color-2: hsl(38, 16%, 76%);
-  --color-3: hsl(34, 6%, 24%);
-  --color-4: hsl(40, 4%, 14%);
-  --color-5: hsl(17, 83%, 54%);
-  --color-6: hsl(30, 30%, 35%);
-  --color-9: black;
-
-
+	--color-0: white;
+	--color-1: hsl(46, 100%, 97%);
+	--color-2: hsl(38, 16%, 76%);
+	--color-3: hsl(34, 6%, 24%);
+	--color-4: hsl(40, 4%, 14%);
+	--color-5: hsl(17, 83%, 54%);
+	--color-6: hsl(30, 30%, 35%);
+	--color-9: black;
 }
 
 /* DEFAULT VALUES */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
-/* NAVBAR */
+/* 상단바 */
 #navbar {
-  background: var(--color-4);
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: 10;
+	background: var(--color-4);
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
 
 #navbar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	list-style: none;
 }
 
 #navbar a {
-  display: block;
-  padding: 20px 4vw;
-  font-size: 16px;
-  color: var(--color-1);
+	display: block;
+	padding: 20px 4vw;
+	font-size: 16px;
+	color: var(--color-1);
 }
 
 #navbar i {
-  margin-right: 10px;
-  color: var(--color-4);
-  transition: color 0.5s;
+	margin-right: 10px;
+	color: var(--color-4);
+	transition: color 0.5s;
 }
 
 #navbar a:hover i {
-  color: var(--color-5);
+	color: var(--color-5);
 }
 
-@media (max-width: 600px) {
-  #navbar ul {
-    justify-content: center;
-  }
-
-  #navbar a {
-    padding: 15px 5vw;
-    font-size: 14px;
-  }
+@media ( max-width : 600px) {
+	#navbar ul {
+		justify-content: center;
+	}
+	#navbar a {
+		padding: 15px 5vw;
+		font-size: 14px;
+	}
 }
 
-/* WELCOME SECTION */
+/* welcome 부분 */
 #welcome-section {
-  padding: 10px;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto auto 1fr;
-  justify-items: center;
-  grid-row-gap: 15px;
-  background: var(--color-3);
-  /* 웰컴페이지 부분 배경화면   */
-  /*   background-image: url("https://i.postimg.cc/Gp1CKLQF/florian-olivo-4hb-J-eym-Z1o-unsplash-modified.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center; */
+	padding: 10px;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto auto 1fr;
+	justify-items: center;
+	grid-row-gap: 15px;
+	background: var(--color-3);
 }
 
 #welcome-section h1 {
-  padding: 30px 50px;
-  grid-row: 2;
-  font-family: var(--font-em);
-  font-size: 60px;
-  font-weight: 300;
-  text-align: center;
-  color: var(--color-1);
-  text-shadow: 0 3px 2px var(--color-4);
+	padding: 30px 50px;
+	grid-row: 2;
+	font-family: var(--font-em);
+	font-size: 60px;
+	font-weight: 300;
+	text-align: center;
+	color: var(--color-1);
+	text-shadow: 0 3px 2px var(--color-4);
 }
 
 #link-to-contact {
-  padding: 10px 30px;
-  grid-row: 3;
-  border-radius: 9999px;
-  background: var(--color-5);
-  font-size: 20px;
-  font-weight: 100;
-  font-style: italic;
-  text-align: center;
-  color: var(--color-1);
-  box-shadow: 0 4px var(--color-4);
-  transition: transform 0.5s;
+	padding: 10px 30px;
+	grid-row: 3;
+	border-radius: 9999px;
+	background: var(--color-5);
+	font-size: 20px;
+	font-weight: 100;
+	font-style: italic;
+	text-align: center;
+	color: var(--color-1);
+	box-shadow: 0 4px var(--color-4);
+	transition: transform 0.5s;
 }
 
 #link-to-contact:hover {
-  transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
 }
 
 #link-to-projects {
-  padding: 0 10px;
-  width: auto;
-  grid-row: 4;
-  align-self: end;
-  text-align: center;
-  font-size: 40px;
-  color: var(--color-5);
-  text-shadow: 0 4px var(--color-4);
-  transition: transform 0.3s;
+	padding: 0 10px;
+	width: auto;
+	grid-row: 4;
+	align-self: end;
+	text-align: center;
+	font-size: 40px;
+	color: var(--color-5);
+	text-shadow: 0 4px var(--color-4);
+	transition: transform 0.3s;
 }
 
 #link-to-projects:hover {
-  transform: translateY(-10px);
+	transform: translateY(-10px);
 }
 
-@media (max-width: 600px) {
-  #welcome-section h1 {
-    font-size: 42px;
-  }
-
-  #link-to-contact {
-    font-size: 16px;
-  }
+@media ( max-width : 600px) {
+	#welcome-section h1 {
+		font-size: 42px;
+	}
+	#link-to-contact {
+		font-size: 16px;
+	}
 }
 
-
-/* about */
+/* about 부분 */
 #about {
-  padding: 40px 20px;
-  background: var(--color-6);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	padding: 40px 20px;
+	background: var(--color-6);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 #about h1 {
-  margin-bottom: 20px;
-  font-size: 36px;
-  color: var(--color-1);
+	margin-bottom: 20px;
+	font-size: 36px;
+	color: var(--color-1);
 }
 
 .about-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
 
 .about-image-wrapper {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
 .about-image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .about-details {
-  max-width: 500px;
-  text-align: left;
+	max-width: 500px;
+	text-align: left;
 }
 
 .about-details ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 .about-details li {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: var(--color-1);
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: var(--color-1);
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-image-wrapper {
-    display: none;
-  }
+@media ( max-width : 768px) {
+	.about-container {
+		flex-direction: column;
+	}
+	.about-image-wrapper {
+		display: none;
+	}
 }
 
-@media (max-width: 480px) {
-  #about h1 {
-    font-size: 28px;
-  }
-
-  .about-details li {
-    font-size: 16px;
-  }
+@media ( max-width : 480px) {
+	#about h1 {
+		font-size: 28px;
+	}
+	.about-details li {
+		font-size: 16px;
+	}
 }
 
-/* skills */
-  #skills {
-    height: 100vh;
-    background: var(--color-2);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-  }
+/* 보유기술 */
+#skills {
+	height: 100vh;
+	background: var(--color-2);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
 
-  #skills h2 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
+#skills h2 {
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
 
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
 
-  .skill-logo {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.skill-logo {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	overflow: hidden;
+	background: white;
+	padding: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .skill-logo img {
-    max-width: 100%;
-    max-height: 100%;
-  }
+.skill-logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
 
-  @media (max-width: 768px) {
-    .skills-container {
-      gap: 8px;
-    }
+@media ( max-width : 768px) {
+	.skills-container {
+		gap: 8px;
+	}
+	.skill-logo {
+		width: 80px;
+		height: 80px;
+	}
+}
 
-    .skill-logo {
-      width: 80px;
-      height: 80px;
-    }
-  }
+@media ( max-width : 480px) {
+	.skills-container {
+		gap: 6px;
+	}
+	.skill-logo {
+		width: 60px;
+		height: 60px;
+	}
+}
 
-  @media (max-width: 480px) {
-    .skills-container {
-      gap: 6px;
-    }
-
-    .skill-logo {
-      width: 60px;
-      height: 60px;
-    }
-  }
-
-/* PROJECTS */
+/* 프로젝트 부분 */
 #projects {
-  padding-top: 80px;
-  padding-bottom: 40px;
-  min-height: 100vh;
-  background: var(--color-1);
-  text-align: center;
+	padding-top: 80px;
+	padding-bottom: 40px;
+	min-height: 100vh;
+	background: var(--color-1);
+	text-align: center;
 }
 
 #projects h2 {
-  padding: 20px;
-  font-weight: 300;
-  font-size: 22px;
-  color: var(--color-4);
+	padding: 20px;
+	font-weight: 300;
+	font-size: 22px;
+	color: var(--color-4);
 }
 
 #projects-gallery {
-  margin: auto;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: stretch;
-  grid-gap: 40px;
+	margin: auto;
+	padding: 20px;
+	width: 100%;
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	align-items: stretch;
+	grid-gap: 40px;
 }
 
 .project-tile {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  padding: 10px;
-  background: var(--color-1);
+	display: grid;
+	grid-template-rows: 1fr auto;
+	padding: 10px;
+	background: var(--color-1);
 }
 
 .project-tile a {
-  align-self: start;
+	align-self: start;
 }
 
 .project-caption {
-  margin-top: 20px;
-  font-size: 18px;
-  color: var(--color-4);
+	margin-top: 20px;
+	font-size: 18px;
+	color: var(--color-4);
 }
 
 .webpage-img {
-  display: block;
-  height: auto;
-  width: 100%;
-  line-height: 100%;
-  border: 1px solid var(--color-2);
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+	display: block;
+	height: auto;
+	width: 100%;
+	line-height: 100%;
+	border: 1px solid var(--color-2);
+	border-radius: 10px;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .webpage-img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 6px var(--color-2);
+	transform: translateY(-10px);
+	box-shadow: 0 0 6px var(--color-2);
 }
 
 .placeholder-img {
-  height: 100%;
-  min-height: 200px;
-  width: 100%;
-  display: flex;
-  background: var(--color-3);
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+	height: 100%;
+	min-height: 200px;
+	width: 100%;
+	display: flex;
+	background: var(--color-3);
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
 }
 
 .placeholder-img p {
-  font-family: var(--font-em);
-  font-size: 20px;
-  color: var(--color-5);
+	font-family: var(--font-em);
+	font-size: 20px;
+	color: var(--color-5);
 }
 
 #more-button {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 15px 30px;
-  border-radius: 9999px;
-  background: var(--color-5);
-  font-size: 18px;
-  color: var(--color-1);
-  box-shadow: 0 4px var(--color-4);
-  transition: transform 0.5s;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 15px 30px;
+	border-radius: 9999px;
+	background: var(--color-5);
+	font-size: 18px;
+	color: var(--color-1);
+	box-shadow: 0 4px var(--color-4);
+	transition: transform 0.5s;
 }
 
 #more-button i {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 #more-button:hover {
-  transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
 }
 
-@media (max-width: 600px) {
-  #more-button {
-    font-size: 16px;
-  }
+@media ( max-width : 600px) {
+	#more-button {
+		font-size: 16px;
+	}
 }
 
-/* CONTACT */
+/* CONTACT 부분 */
 #contact-section {
-  height: 100vh;
-  background: var(--color-4);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
+	height: 100vh;
+	background: var(--color-4);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
 }
 
 #contact {
-  height: 100%;
-  flex-shrink: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	height: 100%;
+	flex-shrink: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #contact h2 {
-  padding: 10px;
-  font-family: var(--font-em);
-  font-size: 50px;
-  font-weight: 300;
-  color: var(--color-1);
-  text-shadow: 0 4px var(--color-4);
+	padding: 10px;
+	font-family: var(--font-em);
+	font-size: 50px;
+	font-weight: 300;
+	color: var(--color-1);
+	text-shadow: 0 4px var(--color-4);
 }
 
 #contact h3 {
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--color-1);
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 300;
+	font-style: italic;
+	color: var(--color-1);
 }
 
 #links-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 #links-list li {
-  padding: 20px 30px;
-  font-size: 20px;
+	padding: 20px 30px;
+	font-size: 20px;
 }
 
 #links-list li a {
-  display: block;
-  color: var(--color-1);
-  transition: transform 0.5s;
+	display: block;
+	color: var(--color-1);
+	transition: transform 0.5s;
 }
 
 #links-list li a:hover {
-  transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
 }
 
 #links-list li i {
-  margin-right: 10px;
-  color: var(--color-5);
+	margin-right: 10px;
+	color: var(--color-5);
 }
 
-@media (max-width: 800px) {
-  #contact h2 {
-    font-size: 40px;
-  }
-
-  #contact h3 {
-    font-size: 16px;
-  }
-
-  #links-list {
-    flex-direction: column;
-  }
-
-  #links-list li {
-    padding: 10px 40px;
-    font-size: 20px;
-  }
+@media ( max-width : 800px) {
+	#contact h2 {
+		font-size: 40px;
+	}
+	#contact h3 {
+		font-size: 16px;
+	}
+	#links-list {
+		flex-direction: column;
+	}
+	#links-list li {
+		padding: 10px 40px;
+		font-size: 20px;
+	}
 }
 
-@media (max-width: 600px) {
-  #contact h2 {
-    font-size: 30px;
-  }
-
-  #links-list li {
-    font-size: 16px;
-  }
+@media ( max-width : 600px) {
+	#contact h2 {
+		font-size: 30px;
+	}
+	#links-list li {
+		font-size: 16px;
+	}
 }
 
 /* FOOTER */
 #footer-container {
-  height: auto;
-  background: var(--color-4);
-  flex-shrink: 0;
-  box-shadow: 0 -1px 0 var(--color-5);
-  z-index: 10;
+	height: auto;
+	background: var(--color-4);
+	flex-shrink: 0;
+	box-shadow: 0 -1px 0 var(--color-5);
+	z-index: 10;
 }
 
 footer {
-  margin: auto;
-  padding: 30px;
-  height: 100%;
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 14px;
-  color: var(--color-1);
+	margin: auto;
+	padding: 30px;
+	height: 100%;
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 14px;
+	color: var(--color-1);
 }
 
 footer a {
-  color: var(--color-5);
+	color: var(--color-5);
 }
 
 footer p:first-child {
-  text-align: left;
+	text-align: left;
 }
 
 footer p:last-child {
-  text-align: right;
+	text-align: right;
 }
 
-@media (max-width: 600px) {
-  footer {
-    padding: 20px;
-  }
-
-  footer p {
-    font-size: 12px;
-  }
+@media ( max-width : 600px) {
+	footer {
+		padding: 20px;
+	}
+	footer p {
+		font-size: 12px;
+	}
 }
-
-
-  </style>
+</style>
 </head>
 <body>
-  <!-- NAVBAR (상단바) -->
-<nav id="navbar">
+	<!-- NAVBAR (상단바) -->
+	<nav id="navbar">
 
-  <ul>
+		<ul>
 
-    <li><a class="section-link" href="#welcome-section"><i class="fas fa-chevron-right"></i>welcome</a></li>
+			<li><a class="section-link" href="#welcome-section"><i class="fas fa-chevron-right"></i>welcome</a></li>
 
-    <li><a class="section-link" href="#about"><i class="fas fa-chevron-right"></i>about</a></li>
+			<li><a class="section-link" href="#about"><i class="fas fa-chevron-right"></i>about</a></li>
 
-    <li><a class="section-link" href="#skills"><i class="fas fa-chevron-right"></i>skills</a></li>
+			<li><a class="section-link" href="#skills"><i class="fas fa-chevron-right"></i>skills</a></li>
 
-    <li><a class="section-link" href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
+			<li><a class="section-link" href="#projects"><i class="fas fa-chevron-right"></i>Projects</a></li>
 
-    <li><a class="section-link" href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
+			<li><a class="section-link" href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
 
-  </ul>
+		</ul>
 
-</nav>
+	</nav>
 
-<!-- WELCOME -->
-<section id="welcome-section">
+	<!-- WELCOME -->
+	<section id="welcome-section">
 
-  <h1>O Chang Jin</h1>
+		<h1>O Chang Jin</h1>
 
-  <a id="link-to-contact" href="#contact-section">Contact me</a>
+		<a id="link-to-contact" href="#contact-section">Contact me</a>
 
-  <a id="link-to-projects" href="#about"><i class="fas fa-chevron-down"></i></a>
 
-</section>
 
-<!-- about me -->
-<!-- about me -->
-<section id="about">
-  <h1>소개</h1>
-  <div class="about-container">
-    <div class="about-image-wrapper">
-      <img class="about-image" src="https://velog.velcdn.com/images/tama51/post/22d8f16d-e43f-4c33-822f-9a6a61a1de2a/image.jpg" alt="소개 이미지">
-    </div>
-    <div class="about-details">
-      <ul>
-        <li>이름 : 오창진</li>
-        <li>학력 : 대전이문고등학교 졸업</li>
-        <li>교육 :
-          <ul>
-            <li>코리아IT아카데미 [산대특]프롬프트AI&Open API&공공데이터를 활용한 웹앱개발자 양성과정(6개월)</li>
-            <li>코리아IT아카데미 python 기초 , 심화(1개월)</li>
-            <li>코리아IT아카데미 프론트엔드 개발과정 (2개월)</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-   <a id="link-to-projects" href="#skills"><i class="fas fa-chevron-down"></i></a>
-</section>
+	</section>
 
-<!-- skills -->
-<section id="skills">
-  <h2>기술 스택</h2>
-  <div class="skills-container">
+	<!-- about me -->
+	<!-- about me -->
+	<section id="about">
+		<h1>소개</h1>
+		<div class="about-container">
+			<div class="about-image-wrapper">
+				<img class="about-image"
+					src="https://velog.velcdn.com/images/tama51/post/22d8f16d-e43f-4c33-822f-9a6a61a1de2a/image.jpg" alt="소개 이미지">
+			</div>
+			<div class="about-details">
+				<ul>
+					<li>이름 : 오창진</li>
+					<li>학력 : 대전이문고등학교 졸업</li>
+					<li>교육 :
+						<ul>
+							<li>코리아IT아카데미 [산대특]프롬프트AI&Open API&공공데이터를 활용한 웹앱개발자 양성과정(6개월)</li>
+							<li>코리아IT아카데미 python 기초 , 심화(1개월)</li>
+							<li>코리아IT아카데미 프론트엔드 개발과정 (2개월)</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
-    </div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png" alt="">
-    </div>
+	</section>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png?20180912181046" alt="">
-    </div>
+	<!-- skills -->
+	<section id="skills">
+		<h2>기술 스택</h2>
+		<div class="skills-container">
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Java-logo.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+					alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/438px-Python-logo-notext.svg.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"
+					alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/524px-JQuery-Logo.svg.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/397px-Javascript-shield.svg.png?20180912181046"
+					alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Java-logo.png" alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/438px-Python-logo-notext.svg.png"
+					alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png?20230616230349" alt="">
-    </div>
+			<div class="skill-logo">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/524px-JQuery-Logo.svg.png"
+					alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://velog.velcdn.com/images/tama51/post/177c1912-576d-4a60-9b77-8139fd8623e6/image.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="">
+			</div>
 
-    <div class="skill-logo">
-      <img src="https://velog.velcdn.com/images/tama51/post/ff0a09c6-eb39-4f43-922c-55b75e006362/image.png" alt="">
-    </div>
+			<div class="skill-logo">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png"
+					alt="">
+			</div>
 
-  </div>
-  
-  <a id="link-to-projects" href="#projects"><i class="fas fa-chevron-down"></i></a>
-</section>
+			<div class="skill-logo">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png?20230616230349"
+					alt="">
+			</div>
 
-<!-- PROJECTS -->
-<section id="projects">
+			<div class="skill-logo">
+				<img src="https://velog.velcdn.com/images/tama51/post/177c1912-576d-4a60-9b77-8139fd8623e6/image.png" alt="">
+			</div>
 
-  <h2>My projects</h2>
+			<div class="skill-logo">
+				<img src="https://velog.velcdn.com/images/tama51/post/ff0a09c6-eb39-4f43-922c-55b75e006362/image.png" alt="">
+			</div>
 
-  <div id="projects-gallery">
+		</div>
 
-    <div class="project-tile">
-      <a href="https://github.com/dhckdwls/Project-OCJ-24-03-20" target="_blank">
-        <img class="webpage-img" src="https://camo.githubusercontent.com/fcb8e86234d1a4372d1601680b6bfb9736213ed7d179deeec88a4ac45f0db6a3/68747470733a2f2f76656c6f672e76656c63646e2e636f6d2f696d616765732f74616d6135312f706f73742f39633132623837662d356438312d343134662d613136362d3663656431626164653965652f696d6167652e706e67" alt="webpage screen">
-      </a>
-      <p class="project-caption">Random Trip</p>
-    </div>
 
-    <div class="project-tile">
-      <a href="https://github.com/teamProject-24-04" target="_blank">
-        <img class="webpage-img" src="https://velog.velcdn.com/images/tama51/post/5847c2a6-7846-4cdd-9ad7-53bb81768ebb/image.png" alt="webpage screen">
-      </a>
-      <p class="project-caption">GrillMaster</p>
-    </div>
+	</section>
 
-    <div class="project-tile">
-      <a href="https://velog.io/@tama51/%ED%94%84%EB%A6%AC%EC%98%A8" target="_blank">
-        <img class="webpage-img" src="https://velog.velcdn.com/images/tama51/post/1caad616-ced9-4812-ab9f-599c5e5c83f9/image.png" alt="webpage screen">
-      </a>
-      <p class="project-caption">Prion</p>
-    </div>
+	<!-- PROJECTS -->
+	<section id="projects">
 
-    <div class="project-tile">
-      <a>
-        <div class=placeholder-img>
-          <p>Coming soon</p>
-        </div>
-      </a>
-      <p class="project-caption">Other</p>
-    </div>
+		<h2>My projects</h2>
 
-    <div class="project-tile">
-      <a>
-        <div class=placeholder-img>
-          <p>Coming soon</p>
-        </div>
-      </a>
-      <p class="project-caption">Other</p>
-    </div>
+		<div id="projects-gallery">
 
-    <div class="project-tile">
-      <a>
-        <div class=placeholder-img>
-          <p>Coming soon</p>
-        </div>
-      </a>
-      <p class="project-caption">Other</p>
-    </div>
+			<div class="project-tile">
+				<a href="https://github.com/dhckdwls/Project-OCJ-24-03-20" target="_blank"> <img class="webpage-img"
+					src="https://camo.githubusercontent.com/fcb8e86234d1a4372d1601680b6bfb9736213ed7d179deeec88a4ac45f0db6a3/68747470733a2f2f76656c6f672e76656c63646e2e636f6d2f696d616765732f74616d6135312f706f73742f39633132623837662d356438312d343134662d613136362d3663656431626164653965652f696d6167652e706e67"
+					alt="webpage screen">
+				</a>
+				<p class="project-caption">Random Trip</p>
+			</div>
 
-  </div>
-  
-  <a id="link-to-projects" href="#contact"><i class="fas fa-chevron-down"></i></a>
+			<div class="project-tile">
+				<a href="https://github.com/teamProject-24-04" target="_blank"> <img class="webpage-img"
+					src="https://velog.velcdn.com/images/tama51/post/5847c2a6-7846-4cdd-9ad7-53bb81768ebb/image.png"
+					alt="webpage screen">
+				</a>
+				<p class="project-caption">GrillMaster</p>
+			</div>
 
-</section>
+			<div class="project-tile">
+				<a href="https://velog.io/@tama51/%ED%94%84%EB%A6%AC%EC%98%A8" target="_blank"> <img class="webpage-img"
+					src="https://velog.velcdn.com/images/tama51/post/1caad616-ced9-4812-ab9f-599c5e5c83f9/image.png"
+					alt="webpage screen">
+				</a>
+				<p class="project-caption">Prion</p>
+			</div>
 
-<!-- CONTACT -->
-<section id="contact-section">
+			<div class="project-tile">
+				<a>
+					<div class=placeholder-img>
+						<p>Coming soon</p>
+					</div>
+				</a>
+				<p class="project-caption">Other</p>
+			</div>
 
-  <div id="contact">
+			<div class="project-tile">
+				<a>
+					<div class=placeholder-img>
+						<p>Coming soon</p>
+					</div>
+				</a>
+				<p class="project-caption">Other</p>
+			</div>
 
-    <h2>Contact</h2>
+			<div class="project-tile">
+				<a>
+					<div class=placeholder-img>
+						<p>Coming soon</p>
+					</div>
+				</a>
+				<p class="project-caption">Other</p>
+			</div>
 
-    <h3><i class="fa-solid fa-phone"></i>전화번호 : 010 - 9800 - 6111</h3>
-    <h3><i class="fas fa-envelope" ></i>gmail : codetama51@gmail.com</h3>
-    <h3><i class="fas fa-envelope" ></i>naver : tama51@naver.com</h3>
-    <br>
+		</div>
 
-    <ul id="links-list">
-      <li><a href="https://github.com/dhckdwls" target="_blank"><i class="fa-brands fa-github"></i>github 주소</a></li>
-      <li><a href="https://velog.io/@tama51/posts" target="_blank"><i class="fas fa-envelope" ></i>velog 주소</a></li>
-    </ul>
 
-  </div>
 
-  <!-- FOOTER -->
-  <div id="footer-container">
-    <footer>
-      <p>O-Chang-Jin</p>
+	</section>
 
-      <p>Thank-You</p>
-    </footer>
-  </div>
-</section>
+	<!-- CONTACT -->
+	<section id="contact-section">
 
-</div>
+		<div id="contact">
+
+			<h2>Contact</h2>
+
+			<h3>
+				<i class="fa-solid fa-phone"></i>전화번호 : 010 - 9800 - 6111
+			</h3>
+			<h3>
+				<i class="fas fa-envelope"></i>gmail : codetama51@gmail.com
+			</h3>
+			<h3>
+				<i class="fas fa-envelope"></i>naver : tama51@naver.com
+			</h3>
+			<br>
+
+			<ul id="links-list">
+				<li><a href="https://github.com/dhckdwls" target="_blank"><i class="fa-brands fa-github"></i>github 주소</a></li>
+				<li><a href="https://velog.io/@tama51/posts" target="_blank"><i class="fas fa-envelope"></i>velog 주소</a></li>
+			</ul>
+
+		</div>
+
+		<!-- FOOTER -->
+		<div id="footer-container">
+			<footer>
+				<p>O-Chang-Jin</p>
+
+				<p>Thank-You</p>
+			</footer>
+		</div>
+	</section>
+
+	</div>
 </body>
 </html>
